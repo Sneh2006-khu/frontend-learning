@@ -1,0 +1,48 @@
+.skills-row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    scrollbar-width: none;
+}
+
+.skills-row::-webkit-scrollbar {
+    display: none;
+}
+
+.skill-node {
+    background: var(--section-white);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.2rem;
+    font-size: 0.8rem;
+    min-width: 280px;
+    flex-shrink: 0;
+    transition: .3s;
+}
+
+.skill-node:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .20);
+}
+
+.icon-image {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.skill-node p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.skill-node h4 {
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}

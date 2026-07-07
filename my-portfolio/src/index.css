@@ -1,0 +1,96 @@
+:root {
+    --bg-color: #f4f4f4;
+    --section-white: #ffffff;
+    --text-dark: #111111;
+    --text-muted: #555555;
+    --card-placeholder: #dddddd;
+    --btn-dark: #111111;
+    --btn-light: #e0e0e0;
+    --font-sans: 'Inter', sans-serif;
+    --border-color: #e5e7eb;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Common Section Layout */
+.section-white-bg {
+    background-color: var(--section-white);
+    padding: 5rem 4rem;
+}
+
+.section-grey-bg {
+    background-color: var(--bg-color);
+    padding: 5rem 4rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-black {
+    background-color: var(--btn-dark);
+    color: #fff;
+}
+
+.btn-grey {
+    background-color: var(--btn-light);
+    color: var(--text-dark);
+}
+
+/* Three Column Grid (What I Do / Projects) */
+.three-col-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media(max-width:768px) {
+    .section-white-bg,
+    .section-grey-bg {
+        padding: 4rem 1.5rem;
+    }
+}
+
+@media(max-width:480px) {
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn {
+        text-align: center;
+    }
+}
